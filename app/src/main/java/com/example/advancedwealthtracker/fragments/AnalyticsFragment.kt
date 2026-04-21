@@ -32,10 +32,6 @@ class AnalyticsFragment : Fragment() {
     private var mmVaHasData: Boolean = false
     private var mmVaWealthManager: WealthManager? = null
 
-    fun setWealthManager(manager: WealthManager) {
-        mmVaWealthManager = manager
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
