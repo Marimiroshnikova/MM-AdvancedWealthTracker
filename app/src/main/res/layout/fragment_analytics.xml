@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_bg"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/mm_va_tv_analytics_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/analytics_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_dark"
+        android:fontFamily="serif"
+        android:letterSpacing="0.02"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mm_va_card_chart"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:background="@drawable/card_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/mm_va_tv_analytics_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/mm_va_donut_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:progress="0"
+            app:indicatorSize="160dp"
+            app:trackThickness="14dp"
+            app:indicatorInset="0dp"
+            app:trackColor="@color/pastel_peach"
+            app:indicatorColor="@color/pastel_sage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/mm_va_tv_saved_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/mm_va_tv_saved_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saved_percent_label"
+            android:textSize="12sp"
+            android:textColor="@color/text_medium"
+            app:layout_constraintTop_toBottomOf="@id/mm_va_tv_saved_percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mm_va_row_cards"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mm_va_card_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mm_va_card_income_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/mm_va_card_expenses_result"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="8dp">
+
+            <View
+                android:id="@+id/mm_va_income_swatch"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/swatch_lavender"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/mm_va_label_res_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_income"
+                android:textSize="11sp"
+                android:textColor="@color/text_medium"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mm_va_income_swatch"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/mm_va_tv_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                app:layout_constraintTop_toBottomOf="@id/mm_va_label_res_income"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mm_va_card_expenses_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="18dp"
+            app:layout_constraintStart_toEndOf="@id/mm_va_card_income_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="8dp">
+
+            <View
+                android:id="@+id/mm_va_expenses_swatch"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/swatch_peach"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/mm_va_label_res_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_expenses"
+                android:textSize="11sp"
+                android:textColor="@color/text_medium"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mm_va_expenses_swatch"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/mm_va_tv_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                app:layout_constraintTop_toBottomOf="@id/mm_va_label_res_expenses"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mm_va_card_savings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background"
+        android:padding="24dp"
+        app:layout_constraintTop_toBottomOf="@id/mm_va_row_cards"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <View
+            android:id="@+id/mm_va_savings_swatch"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/swatch_sage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/mm_va_label_savings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_final_savings"
+            android:textSize="12sp"
+            android:textColor="@color/text_medium"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mm_va_savings_swatch"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/mm_va_tv_savings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            app:layout_constraintTop_toBottomOf="@id/mm_va_label_savings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/mm_va_tv_formula_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/formula_hint"
+            android:textSize="12sp"
+            android:textColor="@color/text_medium"
+            app:layout_constraintTop_toBottomOf="@id/mm_va_tv_savings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

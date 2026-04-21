@@ -1,0 +1,30 @@
+<resources>
+    <style name="Theme.AdvancedWealthTracker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/pastel_purple</item>
+        <item name="colorPrimaryVariant">@color/pastel_pink</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
+        <item name="android:windowBackground">@color/pastel_bg</item>
+        <item name="tabStyle">@style/CustomTabStyle</item>
+    </style>
+
+    <style name="CustomTabStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@color/white</item>
+        <item name="tabSelectedTextColor">@color/text_dark</item>
+        <item name="tabTextColor">@color/text_medium</item>
+        <item name="tabIndicatorColor">@color/pastel_purple</item>
+        <item name="tabIndicatorHeight">3dp</item>
+    </style>
+
+    <style name="InputCard">
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="MMVaTabText" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

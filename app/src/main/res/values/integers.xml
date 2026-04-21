@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="student_name_letters">6</integer>
+    <integer name="student_surname_letters">11</integer>
+    <integer name="student_birth_day">25</integer>
+</resources>

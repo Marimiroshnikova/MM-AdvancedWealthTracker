@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Advanced Wealth Tracker</string>
+    <string name="student_last_name">Miroshnikova</string>
+
+    <string name="tab_input">Input</string>
+    <string name="tab_analytics">Analytics</string>
+    <string name="tab_profile">Profile</string>
+
+    <string name="hint_income">0.00</string>
+    <string name="hint_expenses">0.00</string>
+    <string name="btn_calculate">Calculate Savings</string>
+
+    <string name="error_empty_field">This field cannot be empty</string>
+    <string name="error_invalid_number">Enter a valid positive number</string>
+    <string name="error_expenses_exceed">Expenses cannot exceed income</string>
+
+    <string name="input_title">My Finances</string>
+    <string name="input_subtitle">Track your income and expenses</string>
+    <string name="label_monthly_income">Monthly Income</string>
+    <string name="label_monthly_expenses">Monthly Expenses</string>
+    <string name="k_chip_template">Your K coefficient: %1$s</string>
+    <string name="k_chip_fallback">Your K coefficient: —</string>
+
+    <string name="analytics_title">Analytics</string>
+    <string name="saved_percent_label">saved</string>
+    <string name="label_income">Income</string>
+    <string name="label_expenses">Expenses</string>
+    <string name="label_final_savings">Final Savings</string>
+    <string name="formula_hint">(Income - Expenses) × K(0.68)</string>
+    <string name="default_value">—</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_avatar">MM</string>
+    <string name="profile_name">Marina Miroshnikova</string>
+    <string name="profile_dob">Born on the 25th</string>
+    <string name="label_coefficient">Coefficient K</string>
+    <string name="k_value">K = 0.68</string>
+    <string name="k_formula">(6 + 11) / 25 = 0.68</string>
+</resources>
